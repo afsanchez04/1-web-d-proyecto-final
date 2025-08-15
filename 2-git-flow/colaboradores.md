@@ -3,4 +3,5 @@
 - Andrés 🚀
 - Miguel ☀️
 - Jonathan r3y35 🎌
-- JcDelega  ☀️
+- JcDelega 
+- Imanol :D
