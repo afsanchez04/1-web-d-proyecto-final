@@ -1,4 +1,4 @@
 ## Colaboradores
 
 - Andrés 🚀
-- Miguel
+- Miguel ☀️
