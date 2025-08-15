@@ -1,7 +1,7 @@
 ## Colaboradores
 
 - Andrés 🚀
-- Miguel ☀️
+- Miguel ⚡
 - Jonathan r3y35 🎌
 - JcDelega 
 - Imanol :D
