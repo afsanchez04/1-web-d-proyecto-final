@@ -5,3 +5,4 @@
 - Jonathan r3y35 🎌
 - JcDelega 
 - Imanol :D
+- David ⚓
