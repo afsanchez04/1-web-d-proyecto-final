@@ -2,6 +2,7 @@ import express from "express"
 import mongoose from "mongoose"
 import cors from "cors"
 import { config } from "dotenv"
+import alumnosRouter from "./routes/alumnos.routes.js"
 
 config()
 
@@ -10,6 +11,7 @@ const app = express()
 
 app.use( express.json() )
 app.use( cors() )
+app.use( "/api/alumnos", alumnosRouter )
 
 mongoose.connect(process.env.MONGO_KEY).then( () => console.log( "Conectado a MongoDB" ) )
 
