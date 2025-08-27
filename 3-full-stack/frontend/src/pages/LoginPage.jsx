@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { loginRequest } from "../api/auth.js";
 
 export const LoginPage = () => {
 
@@ -9,10 +10,20 @@ export const LoginPage = () => {
     formState: { errors },
   } = useForm();
 
+  const navigate = useNavigate()
+
   const onSubmit = async (data) => {
-    console.log("Datos enviados:", data);
-    //const res = await registerRequest(data)
-    //console.log(res)
+
+    const { email, password } = data
+
+    try {
+      const res = await loginRequest({ email, password })
+      console.log(res)
+      navigate("/profile")
+    } catch (error) {
+      console.log(error)
+    }
+
   };
 
   return (
