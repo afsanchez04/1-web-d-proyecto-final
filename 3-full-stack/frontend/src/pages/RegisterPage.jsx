@@ -1,7 +1,8 @@
 
 
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { registerRequest } from "../api/auth";
 
 export const RegisterPage = () => {
   const {
@@ -10,8 +11,19 @@ export const RegisterPage = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Datos enviados:", data);
+  const navigate = useNavigate()
+
+  const onSubmit = async (data) => {
+
+    const { email, password, username } = data
+
+    try {
+      await registerRequest({ email, password, username })
+      navigate("/profile")
+    } catch (error) {
+      console.log(error)
+    }
+
   };
 
   return (
@@ -20,7 +32,7 @@ export const RegisterPage = () => {
         <div className="col-md-6">
           <h2 className="mb-4 text-center">Registro</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
-            
+
             {/* Username */}
             <div className="mb-3">
               <label className="form-label">Username</label>
