@@ -17,3 +17,7 @@ jobs:
     steps:
     - name: "Primera prueba"
       run: echo "Github action ejecutando..."
+    - name: "Que día es hoy"
+      run: date
+    - name: "Contenido del repo"
+      run: ls -la
