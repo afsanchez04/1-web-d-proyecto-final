@@ -13,7 +13,7 @@ const app = express()
 
 app.use( express.json() )
 app.use( cors({
-  origin: "http://localhost:5173",
+  origin: "https://1-web-d-proyecto-final-83lg.vercel.app/",
   credentials: true
 }) )
 app.use( cookieParser() )
