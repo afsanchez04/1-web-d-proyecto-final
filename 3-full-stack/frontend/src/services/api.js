@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 export const api = axios.create({ 
-  baseURL: 'http://localhost:3000/api',
+  baseURL: 'https://1-web-d-proyecto-final.vercel.app/api',
   withCredentials: true 
 });
